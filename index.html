@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-gray-100">
+    <header class="p-4">
+        <nav class="bg-gray-900 dark:bg-gray-900 fixed w-full z-20 top-0 start-0">
+            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <img src=""
+                        style="height: 4rem; width: 4rem;" alt="Logo" />
+                    <span class="self-center text-2xl text-white font-semibold whitespace-nowrap dark:text-white">Blue
+                        Bird</span>
+                </a>
+                <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                    <button type="button"
+                        class="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                        id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown"
+                        data-dropdown-placement="bottom">
+                        <span class="sr-only">Open user menu</span>
+                        <img class="rounded-full" style="height: 3rem; width: 3rem;"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt0jzNRAfoSXlceYMhXwqhZpXyrZqz45eOcw&s"
+                            alt="user photo">
+                    </button>
+                    <!-- Dropdown menu -->
+                    <div class="z-50 hidden my-4 bg-gray-900 text-base list-none divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600"
+                        id="user-dropdown">
+                        <div class="px-4 py-3">
+                            <span class="block text-sm text-gray-900 dark:text-white">Billie</span>
+                        </div>
+                        <ul class="py-2" aria-labelledby="user-menu-button">
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 text-sm text-white hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <button data-collapse-toggle="navbar-sticky" type="button"
+                        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                        aria-controls="navbar-sticky" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 17 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 1h15M1 7h15M1 13h15" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+                    <ul
+                        class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-900 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                        <li style="text-align: -webkit-center;">
+                            <a href="#" id="home" class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 
+                        md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white 
+                        md:dark:hover:bg-transparent dark:border-gray-700" aria-current="page"><svg
+                                    class="me-1 -ms-1 w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                    width="48" height="48" viewBox="0 0 24 24">
+                                    <path fill-rule="evenodd" d="M10 20v-6h4v6h5v-8h3L12 3L2 12h3v8z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                </svg>
+                            </a>
+                            <label for="home"
+                                class="block mb-2 text-sm font-medium text-white dark:text-white">Home</label>
+                        </li>
+                        <li style="text-align: -webkit-center;">
+                            <a href="#" id="notification" class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 
+                        md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white 
+                        md:dark:hover:bg-transparent dark:border-gray-700"><svg class="me-1 -ms-1 w-8 h-8"
+                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="30"
+                                    height="30" fill="currentColor" viewBox="0 0 24 24">
+                                    <path fill-rule="evenodd"
+                                        d="M17.133 12.632v-1.8a5.406 5.406 0 0 0-4.154-5.262.955.955 0 0 0 .021-.106V3.1a1 1 0 0 0-2 0v2.364a.955.955 0 0 0 .021.106 5.406 5.406 0 0 0-4.154 5.262v1.8C6.867 15.018 5 15.614 5 16.807 5 17.4 5 18 5.538 18h12.924C19 18 19 17.4 19 16.807c0-1.193-1.867-1.789-1.867-4.175ZM8.823 19a3.453 3.453 0 0 0 6.354 0H8.823Z"
+                                        clip-rule="evenodd" />
+                                </svg></a>
+                            <label for="notification"
+                                class="block mb-2 text-sm font-medium text-white dark:text-white">Notification</label>
+                        </li>
+                        <li style="text-align: -webkit-center;">
+                            <a href="#" d="chat" class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 
+                        md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent 
+                        dark:border-gray-700"><svg class="me-1 -ms-1 w-8 h-8" xmlns="http://www.w3.org/2000/svg"
+                                    fill="currentColor" width="48" height="48" viewBox="0 0 24 24">
+                                    <path fill-rule="evenodd"
+                                        d="M12 3c5.5 0 10 3.58 10 8s-4.5 8-10 8c-1.24 0-2.43-.18-3.53-.5C5.55 21 2 21 2 21c2.33-2.33 2.7-3.9 2.75-4.5C3.05 15.07 2 13.13 2 11c0-4.42 4.5-8 10-8m5 9v-2h-2v2zm-4 0v-2h-2v2zm-4 0v-2H7v2z"
+                                        clip-rule="evenodd" />
+                                </svg></a>
+                            <label for="chat"
+                                class="block mb-2 text-sm font-medium text-white dark:text-white">Chat</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container mx-auto p-container flex">
+        <aside class="w-1/4 h-full p-4 bg-white rounded-lg shadow mt-10">
+            <div class="relative me-4">
+                <img src="https://static.wikia.nocookie.net/marvelcinematicuniverse/images/f/fa/Howard_the_Duck_-_What_If_%282%29.jpg"
+                    alt="Foto do Usuário" class="profile rounded-full w-32 h-32 mx-auto">
+                <span
+                    class="status start-7 absolute w-5 h-5 bg-green-500 border-2 border-white dark:border-gray-800 rounded-full"></span>
+            </div>
+            <h1 id="displayName" class="text-center text-2xl font-bold mt-2">Howard</h1>
+            <p id="displayUser" class="text-center text-gray-600">@truehoward</p>
+            <p id="displayBio" class="text-center text-gray-600">Privacy Detective</p>
+            <div class="flex justify-around mt-4">
+                <div class="text-center">
+                    <span class="font-bold">100</span>
+                    <p>Following</p>
+                </div>
+                <div class="ms-8 mr-8 divisao"></div>
+                <div class="text-center">
+                    <span class="font-bold">100,00</span>
+                    <p>Followers</p>
+                </div>
+            </div>
+            <center>
+                <button data-modal-target="edit-modal" data-modal-toggle="edit-modal"
+                    class="block text-blue-700 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                    type="button">
+                    My profile
+                </button>
+            </center>
+
+            <div id="edit-modal" tabindex="-1" aria-hidden="true"
+                class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                <div class="relative p-4 w-full max-w-md max-h-full">
+                    <!-- Modal content -->
+                    <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                        <!-- Modal header -->
+                        <div
+                            class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                                Edit profile
+                            </h3>
+                            <button type="button"
+                                class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                                data-modal-toggle="edit-modal">
+                                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 14 14">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                                </svg>
+                                <span class="sr-only">Close modal</span>
+                            </button>
+                        </div>
+                        <!-- Modal body -->
+                        <form id="profileForm" class="p-4 md:p-5">
+                            <div class="grid gap-4 mb-4 grid-cols-2">
+                                <div class="col-span-2">
+                                    <label for="name"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
+                                    <input type="text" name="name" id="name"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                        placeholder="Name" required="">
+                                </div>
+                                <div class="col-span-2">
+                                    <label for="user"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">User</label>
+                                    <input type="text" name="user" id="user"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                        placeholder="Username" required="">
+                                </div>
+                                <div class="col-span-2">
+                                    <label for="bio"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Bio</label>
+                                    <textarea id="bio" rows="4"
+                                        class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                        placeholder="Talk a little about you"></textarea>
+                                </div>
+                            </div>
+                            <button type="submit"
+                                class="text-white inline-flex items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                <svg class="me-1 -ms-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                Save
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <main class="w-1/2 p-4">
+            <section id="new-post" class="mb-4">
+
+                <div id="post-form" class="bg-white p-4 rounded-lg shadow">
+                    <!-- Modal toggle -->
+                    <input data-modal-target="static-modal" data-modal-toggle="static-modal"
+                        class="text-left bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        type="button" value="What do you thinking?" style="color: #989899;">
+
+                    <!-- Main modal -->
+                    <div id="static-modal" data-modal-backdrop="static" tabindex="-1" aria-hidden="true"
+                        class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                        <div class="relative p-4 w-full max-w-2xl max-h-full">
+                            <!-- Modal content -->
+                            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                                <!-- Modal header -->
+                                <div
+                                    class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                                        Create a post
+                                    </h3>
+                                    <button type="button"
+                                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                                        data-modal-hide="static-modal">
+                                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                            fill="none" viewBox="0 0 14 14">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                                        </svg>
+                                        <span class="sr-only">Close modal</span>
+                                    </button>
+                                </div>
+                                <!-- Modal body -->
+                                <div class="p-4 md:p-5 space-y-4">
+                                    <form id="postForm" class="p-4 md:p-5">
+                                        <div class="grid gap-4 mb-4 grid-cols-2">
+                                            <div class="col-span-2">
+                                                <textarea id="description" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 
+                                                focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 
+                                                dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                    placeholder="What do you thinking?"></textarea>
+                                            </div>
+
+                                            <div id="divMedia" style="display: none;"
+                                                class="flex items-center justify-center w-full">
+                                                <label id="labelImage" for="dropzone-file"
+                                                    style="width: 560px; height: 100%;"
+                                                    class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-gray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
+                                                    <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                                                        <div id="dragImage">
+                                                            <svg class="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400"
+                                                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                                                fill="none" viewBox="0 0 20 16">
+                                                                <path stroke="currentColor" stroke-linecap="round"
+                                                                    stroke-linejoin="round" stroke-width="2"
+                                                                    d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2" />
+                                                            </svg>
+                                                            <p class="mb-2 text-sm text-gray-500 dark:text-gray-400">
+                                                                <span class="font-semibold">Click to upload</span> or
+                                                                drag and drop</p>
+                                                            <p class="text-xs text-gray-500 dark:text-gray-400">SVG,
+                                                                PNG, JPG or GIF (MAX. 800x400px)</p>
+                                                        </div>
+                                                        <img id="previewImage"
+                                                            class="flex flex-col items-center justify-center w-full h-full object-cover mb-2 rounded-lg"
+                                                            style="display:none;">
+                                                    </div>
+
+                                                </label>
+                                                <input id="dropzone-file" type="file" class="hidden" />
+                                            </div>
+                                        </div>
+                                        <div class="flex">
+                                            <button type="submit"
+                                                class="inline-flex items-center text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+                                                <svg class="me-1 -ms-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd"
+                                                        d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
+                                                        clip-rule="evenodd"></path>
+                                                </svg>
+                                                Publish
+                                            </button>
+                                            <button type="button" onclick="showMedia()"
+                                                class="inline-flex items-center text-green-700 hover:text-white border border-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+                                                <svg class="me-1 -ms-1 w-5 h-5" xmlns="http://www.w3.org/2000/svg"
+                                                    fill="currentColor" width="30" height="30" viewBox="0 0 24 24">
+                                                    <path fill-rule="evenodd"
+                                                        d="M21 3H3C2 3 1 4 1 5v14c0 1.1.9 2 2 2h18c1 0 2-1 2-2V5c0-1-1-2-2-2M5 17l3.5-4.5l2.5 3.01L14.5 11l4.5 6z"
+                                                        clip-rule="evenodd" />
+                                                    </path>
+                                                </svg>
+                                                Media
+                                            </button>
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="posts">
+
+            </section>
+        </main>
+
+        <aside class="w-1/4 p-4">
+            <div class="bg-white rounded-lg shadow p-4 mb-4">
+                <h2 class="text-xl font-bold mb-2">Suggestions for follow</h2>
+                <ul>
+                    <li class="flex items-center justify-between mb-2">
+                        <img src="https://static.wikia.nocookie.net/marvelcinematicuniverse/images/f/fa/Howard_the_Duck_-_What_If_%282%29.jpg"
+                            alt="Foto do Usuário" class="rounded-full w-10 h-10">
+                        <div class="flex-1 ml-2">
+                            <p class="font-bold">Luke Hammil</p>
+                            <span class="text-sm text-gray-600">@lukeh</span>
+                        </div>
+                        <button class="follow-btn bg-blue-600 text-white p-2 rounded-lg">Follow</button>
+                    </li>
+                    <li class="flex items-center justify-between mb-2">
+                        <img src="https://static.wikia.nocookie.net/marvelcinematicuniverse/images/f/fa/Howard_the_Duck_-_What_If_%282%29.jpg"
+                            alt="Foto do Usuário" class="rounded-full w-10 h-10">
+                        <div class="flex-1 ml-2">
+                            <p class="font-bold">Ariana Little</p>
+                            <span class="text-sm text-gray-600">@littleangel</span>
+                        </div>
+                        <button class="follow-btn bg-blue-600 text-white p-2 rounded">Follow</button>
+                    </li>
+                    <li class="flex items-center justify-between mb-2">
+                        <img src="https://static.wikia.nocookie.net/marvelcinematicuniverse/images/f/fa/Howard_the_Duck_-_What_If_%282%29.jpg"
+                            alt="Foto do Usuário" class="rounded-full w-10 h-10">
+                        <div class="flex-1 ml-2">
+                            <p class="font-bold">Margot Joy</p>
+                            <span class="text-sm text-gray-600">@joymegot</span>
+                        </div>
+                        <button class="follow-btn bg-blue-600 text-white p-2 rounded">Follow</button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bg-white rounded-lg shadow p-4">
+                <h2 class="text-xl font-bold mb-2">Social Trends</h2>
+                <ul>
+                    <li class="mb-2">5G: O Futuro da Conectividade 📱</li>
+                    <li class="mb-2">Sustentabilidade: Pequenas Ações, Grandes Impactos 🌍</li>
+                    <li class="mb-2">Energia Renovável: O Caminho para um Futuro Limpo 🌞</li>
+                </ul>
+                <a href="#" class="text-blue-600">Show more</a>
+            </div>
+        </aside>
+    </div>
+    <script>
+        function showMedia() {
+            const media = document.getElementById("divMedia");
+
+            if (media.style.display === "none") {
+                media.style.display = "block";
+            } else {
+                media.style.display = "none";
+            }
+        }     
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"></script>
+    <script src="https://unpkg.com/flowbite@latest/dist/flowbite.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
